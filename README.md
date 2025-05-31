@@ -1,34 +1,49 @@
-# Instructions
+# 🎨 Configuration personnalisée de VS Code (Custom UI)
 
-**NOTE:** Please take time to read the short documentation of **"Custom CSS and JS Loader"** for some useful tips for various operating systems to avoid issues regarding the changes not taking effect.
+Ce dépôt propose une configuration complète pour transformer l’interface de Visual Studio Code grâce à des personnalisations CSS/JS, regroupées dans un profil dédié nommé `custom-ui`.
 
-1. Install "Custom CSS and JS Loader" VS Code Extension.
-2. Copy the contents of settings.json to your VS Code's settings.json (warning: it will overwrite your settings).
-3. Add `vscode_custom_css.imports` array to your settings.json file:
+## ✅ Ce que vous obtenez
+
+- Une palette de commandes avec effet de flou (blur)
+- Une interface minimaliste (barre d’état et barre latérale masquées)
+- Une typographie moderne et soignée (`Geist Mono`, `Fira Code`)
+- Un fond décoratif SVG (optionnel)
+- Une configuration entièrement isolée dans un profil distinct de votre VS Code principal
+
+---
+
+## 🚀 Installation
+
+### 1. Prérequis
+
+Assurez-vous d’avoir installé :
+- [Visual Studio Code](https://code.visualstudio.com/)
+- `jq` (outil CLI pour manipuler du JSON) :
+  ```bash
+  brew install jq  # macOS
+  sudo apt install jq  # Linux
+
+
+  2. Lancer l’installation
+Téléchargez ou clonez ce dépôt, placez-vous dans le dossier, puis exécutez :
+
+```bash
+chmod +x install-vscode-custom-profile.sh
+./install-vscode-custom-profile.sh
+
 ```
-"vscode_custom_css.imports": [
-    // Absolute file paths for your css/js files
-    // For Mac or Linux
-    // "file:///Users/your-user-name/custom-vscode.css",
-    // "file:///Users/your-user-name/custom-vscode-script.js"
+ ✨ Activation des personnalisations
+Une fois VS Code lancé avec le nouveau profil :
 
-    // For Windows
-    // "file:///C:/path-of-custom-css/custom-vscode.css",
-    // "file:///C:/path-of-custom-css/custom-vscode-script.js"
-],
-```
-4. You might need to take ownership of the CSS/JS files you made or run VS Code with admin privileges on certain operating system:
-```
-Mac and Linux users
-The extension would NOT work if Visual Studio Code cannot modify itself. The cases include:
+Ouvrez la palette de commande (⇧⌘P ou Ctrl+⇧P)
 
-Code files being read-only, like on a read-only file system or,
-Code is not started with the permissions to modify itself.
-You need to claim ownership on Visual Studio Code's installation directory, by running this command:
-
-Note: Replace /usr/share/code where your VS Code is installed.
-sudo chown -R your-user-name /usr/share/code
+Recherchez et exécutez la commande :
+```bash
+Enable Custom CSS and JS
 ```
-5. Enable "Custom CSS and JS Loader" from VS Code's command dialog.
-6. Customize the css or js from this repo to make it look the way you want to, or even better, explore areas of VS Code that you want to customize.
-7. After making some changes, reload the extension (Reload Custom CSS and JS) from VS Code's command dialog.
+🔄 Réinitialisation
+Pour supprimer la configuration personnalisée :
+```bash
+rm -rf ~/.vscode-custom
+````
+
