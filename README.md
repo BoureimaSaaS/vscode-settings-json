@@ -20,6 +20,7 @@ Make sure you have the following installed:
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - `jq` (a CLI tool for JSON manipulation):
+
   ```bash
   brew install jq      # macOS
   sudo apt install jq  # Linux
@@ -39,10 +40,12 @@ Once VS Code is launched with the new profile:
 Open the Command Palette (⇧⌘P or Ctrl+⇧P)
 
 Search for and execute the command:
+
 ```bash
 Enable Custom CSS and JS
 ```
 🔄 Reset / Uninstall
+
 To remove the custom configuration, simply run:
 ```bash
 rm -rf ~/.vscode-custom
