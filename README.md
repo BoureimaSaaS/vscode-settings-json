@@ -1,49 +1,49 @@
-# 🎨 Configuration personnalisée de VS Code (Custom UI)
+# 🎨 VS Code Custom UI Configuration
 
-Ce dépôt propose une configuration complète pour transformer l’interface de Visual Studio Code grâce à des personnalisations CSS/JS, regroupées dans un profil dédié nommé `custom-ui`.
+This repository provides a complete setup to transform the look and feel of Visual Studio Code using custom CSS/JS, organized into a dedicated profile named `custom-ui`.
 
-## ✅ Ce que vous obtenez
+## ✅ What You Get
 
-- Une palette de commandes avec effet de flou (blur)
-- Une interface minimaliste (barre d’état et barre latérale masquées)
-- Une typographie moderne et soignée (`Geist Mono`, `Fira Code`)
-- Un fond décoratif SVG (optionnel)
-- Une configuration entièrement isolée dans un profil distinct de votre VS Code principal
+- A command palette with a blur effect
+- A minimalist interface (status bar and sidebar hidden)
+- Clean and modern typography (`Geist Mono`, `Fira Code`)
+- An optional decorative SVG background
+- A fully isolated configuration profile, separate from your main VS Code setup
 
 ---
 
 ## 🚀 Installation
 
-### 1. Prérequis
+### 1. Prerequisites
 
-Assurez-vous d’avoir installé :
+Make sure you have the following installed:
+
 - [Visual Studio Code](https://code.visualstudio.com/)
-- `jq` (outil CLI pour manipuler du JSON) :
+- `jq` (a CLI tool for JSON manipulation):
   ```bash
-  brew install jq  # macOS
+  brew install jq      # macOS
   sudo apt install jq  # Linux
 
 
-  2. Lancer l’installation
-Téléchargez ou clonez ce dépôt, placez-vous dans le dossier, puis exécutez :
+2. Run the Installer
+Download or clone this repository, navigate to the folder, then run:
 
 ```bash
 chmod +x install-vscode-custom-profile.sh
 ./install-vscode-custom-profile.sh
 
 ```
- ✨ Activation des personnalisations
-Une fois VS Code lancé avec le nouveau profil :
+✨ Enable the Customizations
+Once VS Code is launched with the new profile:
 
-Ouvrez la palette de commande (⇧⌘P ou Ctrl+⇧P)
+Open the Command Palette (⇧⌘P or Ctrl+⇧P)
 
-Recherchez et exécutez la commande :
+Search for and execute the command:
 ```bash
 Enable Custom CSS and JS
 ```
-🔄 Réinitialisation
-Pour supprimer la configuration personnalisée :
+🔄 Reset / Uninstall
+To remove the custom configuration, simply run:
 ```bash
 rm -rf ~/.vscode-custom
 ````
-
