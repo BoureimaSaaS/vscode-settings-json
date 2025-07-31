@@ -76,15 +76,22 @@
         "react": "html",
         "javascript": "html"
     },
+    "emmet.triggerExpansionOnTab": true,
     "files.associations": {
         ".php_cs": "php",
         ".php_cs.dist": "php"
+    },
+    "files.exclude": {
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true
     },
 
     /**
     * PHP
     **/
     "php.suggest.basic": false,
+    "typescript.preferences.quoteStyle": "single",
+    "typescript.updateImportsOnFileMove.enabled": "always",
 
     /**
     * Prettier
@@ -137,8 +144,12 @@
     },
     "security.workspace.trust.untrustedFiles": "open",
     "editor.linkedEditing": true,
-    "editor.formatOnSave": false,
-    // "editor.fontLigatures": false,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
+    "editor.semanticHighlighting.enabled": false,
+    "extensions.ignoreRecommendations": true,
     "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'calt', 'dlig'",
     "diffEditor.wordWrap": "on",
     "notebook.output.wordWrap": true,
@@ -167,22 +178,23 @@
     "editor.padding.top": 16,
     "editor.cursorBlinking": "solid",
     "editor.stickyScroll.enabled": false,
+    "editor.inlayHints.enabled": "off",
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "workbench.editor.closeOnFileDelete": true,
+    "workbench.editor.limit.enabled": true,
+    "workbench.editor.limit.value": 8,
     "editor.lineHeight": 32,
 
     "editor.tokenColorCustomizations": {
         "textMateRules": [
             {
               "scope": [
-                "comment",
                 "keyword",
                 "variable.language",
                 "entity.other.attribute-name.html",
                 "entity.other.attribute-name",
                 "keyword.control",
-                "storage.type",
-                "comment",
-                "comment.block",
-                "comment.line"
+                "storage.type"
               ],
               "settings": {
                 "fontStyle": ""
@@ -195,7 +207,7 @@
         "file:///Users/kadri/vscode-settings-json/custom-vscode.css",
         "file:///Users/kadri/vscode-settings-json/vscode-script.js"
     ],
-    "workbench.colorTheme": "React Theme",
+    "workbench.colorTheme": "Mono Atom",
     "workbench.iconTheme": "eq-material-theme-icons-light",
     "workbench.sideBar.location": "right",
     "material-icon-theme.files.color": "#42a5f5",
