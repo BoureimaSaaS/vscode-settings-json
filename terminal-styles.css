@@ -1,0 +1,115 @@
+/* === STYLES TERMINAL INTÉGRÉ === */
+
+/* Terminal principal */
+.terminal {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid var(--main-accent) !important;
+  margin: 8px !important;
+}
+
+/* En-tête du terminal */
+.terminal .xterm-screen {
+  padding: 16px !important;
+  font-family: var(--font-family) !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+}
+
+/* Curseur du terminal */
+.terminal .xterm-cursor {
+  background-color: var(--main-accent) !important;
+  color: #000 !important;
+  animation: blink 1s infinite !important;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Sélection dans le terminal */
+.terminal .xterm-selection {
+  background-color: rgba(188, 154, 188, 0.3) !important;
+}
+
+/* Couleurs du terminal */
+.terminal .xterm-color-0 { color: #2d2d2d !important; } /* Noir */
+.terminal .xterm-color-1 { color: #ff6b6b !important; } /* Rouge */
+.terminal .xterm-color-2 { color: #51cf66 !important; } /* Vert */
+.terminal .xterm-color-3 { color: #ffd43b !important; } /* Jaune */
+.terminal .xterm-color-4 { color: #339af0 !important; } /* Bleu */
+.terminal .xterm-color-5 { color: #e599f7 !important; } /* Magenta */
+.terminal .xterm-color-6 { color: #20c997 !important; } /* Cyan */
+.terminal .xterm-color-7 { color: #e9ecef !important; } /* Blanc */
+
+/* Terminal en plein écran */
+.terminal.integrated-terminal {
+  height: 100vh !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+}
+
+/* Onglets du terminal */
+.terminal .tabs-container {
+  background: rgba(0, 0, 0, 0.2) !important;
+  border-bottom: 1px solid var(--main-accent) !important;
+  padding: 8px 16px !important;
+}
+
+.terminal .tab {
+  background: transparent !important;
+  border: none !important;
+  color: #e9ecef !important;
+  padding: 8px 16px !important;
+  border-radius: 6px !important;
+  margin-right: 4px !important;
+  transition: all 0.2s ease !important;
+}
+
+.terminal .tab.active {
+  background: var(--main-accent) !important;
+  color: #000 !important;
+}
+
+.terminal .tab:hover {
+  background: rgba(188, 154, 188, 0.2) !important;
+}
+
+/* Boutons du terminal */
+.terminal .actions-container {
+  background: rgba(0, 0, 0, 0.1) !important;
+  border-radius: 8px !important;
+  padding: 8px !important;
+}
+
+.terminal .action-item {
+  color: var(--main-accent) !important;
+  transition: all 0.2s ease !important;
+}
+
+.terminal .action-item:hover {
+  background: rgba(188, 154, 188, 0.1) !important;
+  border-radius: 4px !important;
+}
+
+/* Scrollbar du terminal */
+.terminal .xterm-viewport::-webkit-scrollbar {
+  width: 8px !important;
+}
+
+.terminal .xterm-viewport::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1) !important;
+  border-radius: 4px !important;
+}
+
+.terminal .xterm-viewport::-webkit-scrollbar-thumb {
+  background: var(--main-accent) !important;
+  border-radius: 4px !important;
+}
+
+.terminal .xterm-viewport::-webkit-scrollbar-thumb:hover {
+  background: rgba(188, 154, 188, 0.8) !important;
+}
