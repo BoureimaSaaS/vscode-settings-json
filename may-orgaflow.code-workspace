@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../Herd/may-orgaflow"
+		}
+	],
+	"settings": {
+		"Devdb.colorTheme": "light",
+		"Devdb.showFewerUpdateNotificationActions": true,
+		"chatgpt.openOnStartup": true
+	}
+}
