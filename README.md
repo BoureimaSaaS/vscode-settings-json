@@ -4,11 +4,16 @@ This repository provides a complete setup to transform the look and feel of Visu
 
 ## ✅ What You Get
 
-- A command palette with a blur effect
-- A minimalist interface (status bar and sidebar hidden)
-- Clean and modern typography (`Geist Mono`, `Fira Code`)
-- An optional decorative SVG background
-- A fully isolated configuration profile, separate from your main VS Code setup
+- **🎨 Minimalist Interface** : Hidden activity bar and status bar
+- **✨ Advanced Blur Effect** : Command palette with `backdrop-filter`
+- **🔤 Optimized Typography** : `Geist Mono`, `JetBrains Mono`, `Fira Code`
+- **🎯 Visual Effects** : Smooth animations and fluid transitions
+- **🔔 Notification System** : Integrated custom notifications
+- **⌨️ Custom Shortcuts** : Configurable keyboard shortcuts
+- **🎨 Theme Manager** : Multiple themes system
+- **💾 Automatic Backup** : Backup and restore system
+- **🧪 Automated Tests** : Test suite for validation
+- **📁 Isolated Profile** : Separate configuration from your main VS Code
 
 ---
 
@@ -44,9 +49,51 @@ Search for and execute the command:
 ```bash
 Enable Custom CSS and JS
 ```
-🔄 Reset / Uninstall
+## 🛠️ New Features
+
+### 🎨 Interactive Configuration
+```bash
+chmod +x configure-ui.sh
+./configure-ui.sh
+```
+Configure colors, fonts and interface settings interactively.
+
+### 🎭 Theme Manager
+```bash
+chmod +x theme-manager.sh
+./theme-manager.sh create my-theme
+./theme-manager.sh apply my-theme
+./theme-manager.sh list
+```
+Create and manage multiple custom themes.
+
+### 💾 Backup System
+```bash
+chmod +x backup-manager.sh
+./backup-manager.sh create
+./backup-manager.sh restore backup-name
+./backup-manager.sh list
+```
+Backup and restore your configurations.
+
+### 🧪 Automated Tests
+```bash
+chmod +x test-suite.sh
+./test-suite.sh
+```
+Validate that everything works correctly.
+
+## ⌨️ Custom Shortcuts
+
+- `Ctrl+Shift+T` : Change theme
+- `Ctrl+Shift+F` : Focus mode (temporary blur)
+- `Ctrl+P` : Command palette with blur effect
+- `Escape` : Close blur effects
+
+## 🔄 Reset / Uninstall
 
 To remove the custom configuration, simply run:
 ```bash
 rm -rf ~/.vscode-custom
+rm -rf ~/.vscode-custom-backups
 ````

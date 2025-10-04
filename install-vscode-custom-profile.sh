@@ -20,6 +20,8 @@ mkdir -p "$BASE_DIR"
 echo "🎨 Copie des fichiers CSS et JS..."
 cp ./custom-vscode.css "$CSS_FILE"
 cp ./vscode-script.js "$JS_FILE"
+cp ./terminal-styles.css "$BASE_DIR/terminal-styles.css"
+cp ./terminal-enhancer.js "$BASE_DIR/terminal-enhancer.js"
 
 # === INSTALLATION DE L'EXTENSION Custom CSS and JS Loader ===
 echo "📦 Installation de l'extension Custom CSS and JS Loader..."
@@ -34,7 +36,9 @@ echo "🔧 Ajout des imports CSS/JS au fichier settings.json..."
 jq \
   --arg css "file://$CSS_FILE" \
   --arg js "file://$JS_FILE" \
-  '. + { "vscode_custom_css.imports": [$css, $js] }' \
+  --arg terminal_css "file://$BASE_DIR/terminal-styles.css" \
+  --arg terminal_js "file://$BASE_DIR/terminal-enhancer.js" \
+  '. + { "vscode_custom_css.imports": [$css, $terminal_css, $js, $terminal_js] }' \
   "$SETTINGS_DEST" > "$SETTINGS_DEST.tmp" && mv "$SETTINGS_DEST.tmp" "$SETTINGS_DEST"
 
 # === LANCEMENT DE VS CODE AVEC LE PROFIL ===
